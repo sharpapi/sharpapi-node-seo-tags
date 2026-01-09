@@ -5,6 +5,15 @@ const { SharpApiCoreService, SharpApiJobTypeEnum } = require('@sharpapi/sharpapi
  */
 class SharpApiSeoTagsService extends SharpApiCoreService {
   /**
+   * Creates a new SharpApiSeoTagsService instance
+   * @param {string} apiKey - Your SharpAPI API key
+   * @param {string} [apiBaseUrl='https://sharpapi.com/api/v1'] - API base URL
+   */
+  constructor(apiKey, apiBaseUrl = 'https://sharpapi.com/api/v1') {
+    super(apiKey, apiBaseUrl, '@sharpapi/sharpapi-node-seo-tags/1.0.1');
+  }
+
+  /**
    * Generates all most important META tags based on the content provided.
    * Make sure to include link to the website and pictures URL to get as many tags populated as possible.
    *
